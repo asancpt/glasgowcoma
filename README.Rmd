@@ -15,7 +15,7 @@ Glasgow Coma Scale을 참고하거나 간단한 계산을 할 수 있는 패키�
 설치는 다음과 같이 하면 됩니다.
 
 ```{r eval = FALSE}
-install.pacakges("devtools")
+install.packages("devtools")
 devtools::install_github("shanmdphd/glasgowcoma")
 ```
 
@@ -32,6 +32,8 @@ reportgcs(3, 3, 4, now = "2017-01-01 11:25", simplify = FALSE) # custom time
 reportgcs(verbal = 2.5) # Error
 reportgcs(verbal = "erlk") # Error
 ```
+
+CLI에서 `git clone https://github.com/shanmdphd/cats.git` 하거나 오른쪽 위의 초록색 버튼을 클릭해서 zip파일을 다운로드 한 뒤 압축을 풀고 소스를 수정 할 수 있습니다.
 
 `roxygen2` 패키지를 사용하면 문서 작업을 쉽게 할 수 있습니다.
 각 함수의 앞에 `#'` 으로 시작하는 주석을 각각 달고 다음의 함수를 실행하면 `NAMESPACE`와 `Rd` 파일을 자동으로 고쳐줍니다. 

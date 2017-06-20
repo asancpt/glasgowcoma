@@ -11,7 +11,7 @@ Glasgow Coma Scale을 참고하거나 간단한 계산을 할 수 있는 패키�
 설치는 다음과 같이 하면 됩니다.
 
 ``` r
-install.pacakges("devtools")
+install.packages("devtools")
 devtools::install_github("shanmdphd/glasgowcoma")
 ```
 
@@ -44,20 +44,20 @@ glasgowComaScale
 reportgcs() # Defualt argument
 ```
 
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:11:36 Normal or Minor brain injury suspected"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:26:33 Normal or Minor brain injury suspected"
 
 ``` r
 reportgcs(eye = 4, verbal = 4, motor = 4)
 ```
 
-    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:11:36 Moderate brain injury suspected"
+    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:26:33 Moderate brain injury suspected"
 
 ``` r
 reportgcs(simplify = FALSE) # Full report
 ```
 
     ## $summary
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:11:36"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:26:33"
     ## 
     ## $analysis
     ## [1] "Normal or Minor brain injury suspected"
@@ -95,6 +95,8 @@ reportgcs(verbal = "erlk") # Error
 ```
 
     ## Error in reportgcs(verbal = "erlk"): Only integer is acceptable.
+
+CLI에서 `git clone https://github.com/shanmdphd/cats.git` 하거나 오른쪽 위의 초록색 버튼을 클릭해서 zip파일을 다운로드 한 뒤 압축을 풀고 소스를 수정 할 수 있습니다.
 
 `roxygen2` 패키지를 사용하면 문서 작업을 쉽게 할 수 있습니다. 각 함수의 앞에 `#'` 으로 시작하는 주석을 각각 달고 다음의 함수를 실행하면 `NAMESPACE`와 `Rd` 파일을 자동으로 고쳐줍니다. 직접 Rd 파일을 수정하는 것보다 간소하다고 많은 사람들이 말하곤 합니다.
 
