@@ -2,6 +2,8 @@
 Minimal R package: glasgowcoma
 ==============================
 
+![GCS sketch](http://sketchymedicine.com/wp-content/uploads/2012/09/GCS.jpg)
+
 R Programming 수강생 여러분들께
 
 Glasgow Coma Scale을 참고하거나 간단한 계산을 할 수 있는 패키지입니다.
@@ -44,20 +46,20 @@ glasgowComaScale
 reportgcs() # Defualt argument
 ```
 
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:26:33 Normal or Minor brain injury suspected"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:28:55 Normal or Minor brain injury suspected"
 
 ``` r
 reportgcs(eye = 4, verbal = 4, motor = 4)
 ```
 
-    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:26:33 Moderate brain injury suspected"
+    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:28:55 Moderate brain injury suspected"
 
 ``` r
 reportgcs(simplify = FALSE) # Full report
 ```
 
     ## $summary
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:26:33"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:28:55"
     ## 
     ## $analysis
     ## [1] "Normal or Minor brain injury suspected"
