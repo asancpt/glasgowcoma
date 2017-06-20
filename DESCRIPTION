@@ -1,9 +1,10 @@
 Package: glasgowcoma
-Title: Glasgow Coma Scale Report
-Version: 0.0.0.9000
+Title: A Reference of Glasgow Coma Scale 
+Version: 0.0.1
 Authors@R: person("Sungpil", "Han", email = "shan@acp.kr", role = c("aut", "cre"))
 Description: show and reports GCS
 Depends: R (>= 3.4.0)
+URL: https://github.com/shanmdphd/glasgowcoma
 License: MIT
 Encoding: UTF-8
 LazyData: true
