@@ -1,14 +1,15 @@
 
-Minimal R package: glasgowcoma
-==============================
+Minimum viable product (MVP): R package `glasgowcoma`
+=====================================================
 
 ![GCS sketch](http://sketchymedicine.com/wp-content/uploads/2012/09/GCS.jpg)
 
 R Programming 수강생 여러분들께
 
-Glasgow Coma Scale을 참고하거나 간단한 계산을 할 수 있는 패키지입니다.
+Glasgow Coma Scale을 참고하거나 간단한 계산을 할 수 있는 단순한 패키지입니다. ( [Minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product) )
 
-`roxygen2` 패키지를 사용하면 문서 작업을 쉽게 할 수 있습니다.
+설치
+----
 
 설치는 다음과 같이 하면 됩니다.
 
@@ -16,6 +17,9 @@ Glasgow Coma Scale을 참고하거나 간단한 계산을 할 수 있는 패키�
 install.packages("devtools")
 devtools::install_github("shanmdphd/glasgowcoma")
 ```
+
+실행
+----
 
 실행은 다음과 같이 하면 됩니다.
 
@@ -46,20 +50,20 @@ glasgowComaScale
 reportgcs() # Defualt argument
 ```
 
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:28:55 Normal or Minor brain injury suspected"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:47:01 Normal or Minor brain injury suspected"
 
 ``` r
 reportgcs(eye = 4, verbal = 4, motor = 4)
 ```
 
-    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:28:55 Moderate brain injury suspected"
+    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:47:01 Moderate brain injury suspected"
 
 ``` r
 reportgcs(simplify = FALSE) # Full report
 ```
 
     ## $summary
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:28:55"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:47:01"
     ## 
     ## $analysis
     ## [1] "Normal or Minor brain injury suspected"
@@ -98,7 +102,10 @@ reportgcs(verbal = "erlk") # Error
 
     ## Error in reportgcs(verbal = "erlk"): Only integer is acceptable.
 
-CLI에서 `git clone https://github.com/shanmdphd/cats.git` 하거나 오른쪽 위의 초록색 버튼을 클릭해서 zip파일을 다운로드 한 뒤 압축을 풀고 소스를 수정 할 수 있습니다.
+수정
+----
+
+CLI에서 `git clone https://github.com/shanmdphd/glasgowcoma.git` 하거나 오른쪽 위의 초록색 버튼을 클릭해서 zip파일을 다운로드 한 뒤 압축을 풀고 소스를 수정 할 수 있습니다.
 
 `roxygen2` 패키지를 사용하면 문서 작업을 쉽게 할 수 있습니다. 각 함수의 앞에 `#'` 으로 시작하는 주석을 각각 달고 다음의 함수를 실행하면 `NAMESPACE`와 `Rd` 파일을 자동으로 고쳐줍니다. 직접 Rd 파일을 수정하는 것보다 간소하다고 많은 사람들이 말하곤 합니다.
 
