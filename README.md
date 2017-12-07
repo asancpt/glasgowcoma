@@ -50,20 +50,20 @@ glasgowComaScale
 reportgcs() # Defualt argument
 ```
 
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:47:01 Normal or Minor brain injury suspected"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-12-07 16:00:40 Normal or Minor brain injury suspected"
 
 ``` r
 reportgcs(eye = 4, verbal = 4, motor = 4)
 ```
 
-    ## [1] "GCS 12 = E4 V4 M4 at 2017-06-20 18:47:01 Moderate brain injury suspected"
+    ## [1] "GCS 12 = E4 V4 M4 at 2017-12-07 16:00:40 Moderate brain injury suspected"
 
 ``` r
 reportgcs(simplify = FALSE) # Full report
 ```
 
     ## $summary
-    ## [1] "GCS 15 = E4 V5 M6 at 2017-06-20 18:47:01"
+    ## [1] "GCS 15 = E4 V5 M6 at 2017-12-07 16:00:40"
     ## 
     ## $analysis
     ## [1] "Normal or Minor brain injury suspected"
