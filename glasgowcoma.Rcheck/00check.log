@@ -1,0 +1,102 @@
+* using log directory 'C:/Users/mdlhs/asancpt/glasgowcoma/glasgowcoma.Rcheck'
+* using R version 3.4.3 (2017-11-30)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: CP949
+* using option '--as-cran'
+* checking for file 'glasgowcoma/DESCRIPTION' ... OK
+* this is package 'glasgowcoma' version '0.0.1'
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: 'Sungpil Han <shan@acp.kr>'
+
+New submission
+
+The Description field should start with a capital letter.
+
+The Date field is over a month old.
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'glasgowcoma' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Description field: should contain one or more complete sentences.
+License components which are templates and need '+ file LICENSE':
+  MIT
+* checking top-level files ... NOTE
+Non-standard file/directory found at top level:
+  'Makefile'
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+reportgcs: no visible binding for global variable 'glasgowComaScale'
+Undefined global functions or variables:
+  glasgowComaScale
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of 'data' directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking line endings in Makefiles ... OK
+* checking for GNU extensions in Makefiles ... OK
+* checking examples ... ERROR
+Running examples in 'glasgowcoma-Ex.R' failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: reportgcs
+> ### Title: Report GCS
+> ### Aliases: reportgcs
+> 
+> ### ** Examples
+> 
+> 
+> reportgcs()
+[1] "GCS 15 = E4 V5 M6 at 2017-12-07 15:58:33 Normal or Minor brain injury suspected"
+> reportgcs(simplify = FALSE)
+$summary
+[1] "GCS 15 = E4 V5 M6 at 2017-12-07 15:58:34"
+
+$analysis
+[1] "Normal or Minor brain injury suspected"
+
+$description
+   ID  Class Score                       Value
+4  E4    Eye     4    Opens eyes spontaneously
+9  V5 Verbal     5 Oriented converses normally
+15 M6  Motor     6              Obeys commands
+
+> reportgcs(4, 5, 6, now = "2017-01-01 11:25") # custom time
+[1] "GCS 15 = E4 V5 M6 at 2017-01-01 11:25 Normal or Minor brain injury suspected"
+> reportgcs(verbal = 2.5) # Error
+Error in reportgcs(verbal = 2.5) : Only integer is acceptable.
+Execution halted
+* checking PDF version of manual ... OK
+* DONE
+Status: 1 ERROR, 4 NOTEs

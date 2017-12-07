@@ -1,0 +1,72 @@
+
+R version 3.4.3 (2017-11-30) -- "Kite-Eating Tree"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "glasgowcoma"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> base::assign(".ExTimings", "glasgowcoma-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('glasgowcoma')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("reportgcs")
+> ### * reportgcs
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: reportgcs
+> ### Title: Report GCS
+> ### Aliases: reportgcs
+> 
+> ### ** Examples
+> 
+> 
+> reportgcs()
+[1] "GCS 15 = E4 V5 M6 at 2017-12-07 15:58:33 Normal or Minor brain injury suspected"
+> reportgcs(simplify = FALSE)
+$summary
+[1] "GCS 15 = E4 V5 M6 at 2017-12-07 15:58:34"
+
+$analysis
+[1] "Normal or Minor brain injury suspected"
+
+$description
+   ID  Class Score                       Value
+4  E4    Eye     4    Opens eyes spontaneously
+9  V5 Verbal     5 Oriented converses normally
+15 M6  Motor     6              Obeys commands
+
+> reportgcs(4, 5, 6, now = "2017-01-01 11:25") # custom time
+[1] "GCS 15 = E4 V5 M6 at 2017-01-01 11:25 Normal or Minor brain injury suspected"
+> reportgcs(verbal = 2.5) # Error
+Error in reportgcs(verbal = 2.5) : Only integer is acceptable.
+Execution halted

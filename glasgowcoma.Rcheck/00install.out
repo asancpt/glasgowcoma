@@ -1,0 +1,13 @@
+* installing *source* package 'glasgowcoma' ...
+** R
+** data
+*** moving datasets to lazyload DB
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (glasgowcoma)
+In R CMD INSTALL
